@@ -5,19 +5,33 @@ const SudokuSolver = require("../controllers/sudoku-solver.js");
 module.exports = function (app) {
   let solver = new SudokuSolver();
 
-  app.route("/api/check").post((req, res) => {});
+  app.route("/api/check").post((req, res) => {
+    const { puzzle, coordinate, value } = req.body;
+    if (!puzzle.trim() || !coordinate.trim() || !value.trim()) {
+      return res.json({ error: "Required field(s) missing" });
+    }
+  });
 
   app.route("/api/solve").post((req, res) => {
-    const { puzzle } = req.body;
+    try {
+      if (!req.body.hasOwnProperty("puzzle")) {
+        return res.json({ error: "Required field missing" });
+      }
+      const { puzzle } = req.body;
 
-    if (!puzzle.trim()) {
-      return res.json({ error: "Required field missing" });
-    }
-    if (!solver.validate(puzzle)) {
-      return res.json({ error: "Invalid characters in puzzle" });
-    }
-    if (puzzle.length !== 81) {
-      return res.json({ error: "Expected puzzle to be 81 characters long" });
+      const reponseString = solver.validate(puzzle);
+
+      if (reponseString !== "Valid puzzle string") {
+        return res.json({ error: reponseString });
+      }
+
+      const solution = solver.solve(puzzle);
+      if (solution === "Puzzle cannot be solved") {
+        return res.json({ error: solution });
+      }
+      return { solution };
+    } catch (error) {
+      res.json({ error: "An error has occurred" });
     }
   });
 };
