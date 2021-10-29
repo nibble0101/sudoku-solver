@@ -1,8 +1,9 @@
 const rowLabels = "ABCDEFGHI";
+const invalidChar = /[^1-9\.]/;
 
 class SudokuSolver {
   validate(puzzleString) {
-    if (/[^1-9\.]/.test(puzzleString)) {
+    if (invalidChar.test(puzzleString)) {
       return "Invalid characters in puzzle";
     }
 
