@@ -6,7 +6,7 @@ This is my solution to the FreeCodeCamp [Sudoku Solver](https://www.freecodecamp
 
 Build a full stack JavaScript app that is functionally similar to the [sample app](https://sudoku-solver.freecodecamp.rocks/). Working on this project will involve you writing your code using one of the following methods:
 
-- Clone [this GitHub repo(https://github.com/freecodecamp/boilerplate-project-sudoku-solver) and complete your project locally.
+- Clone [this GitHub repo](https://github.com/freecodecamp/boilerplate-project-sudoku-solver) and complete your project locally.
 - Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-sudoku-solver) to complete your project.
 - Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 
