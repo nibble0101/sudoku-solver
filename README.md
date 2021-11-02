@@ -1,6 +1,6 @@
 # Sudoku Solver
 
-This is my solution to the FreeCodeCamp [Sudoku Solver](https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/sudoku-solver).
+This is my solution to the FreeCodeCamp [Sudoku Solver](https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/sudoku-solver) challenge. 
 
 ## Instrcutions
 
@@ -14,7 +14,7 @@ When you are done, make sure a working demo of your project is hosted somewhere 
 
 ---
 
-- All puzzle logic can go into /controllers/sudoku-solver.js.
+- All puzzle logic can go into `/controllers/sudoku-solver.js`.
   - The `validate` function should take a given puzzle string and check it to see if it has 81 valid characters for the input.
   - The `check` functions should be validating against the current state of the board.
   - The `solve` function should handle solving any given valid puzzle string, not just the test inputs and solutions. You are expected to write out the logic to solve this.
