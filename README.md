@@ -21,7 +21,7 @@ When you are done, make sure a working demo of your project is hosted somewhere 
 - All routing logic can go into `/routes/api.js`.
 - See the `puzzle-strings.js` file in `/controllers` for some sample puzzles your application should solve.
 - To run the challenge tests on this page, set `NODE_ENV` to `test` without quotes in the `.env` file.
-- To run the tests in the console, use the command `npm run test`. To open the Replit console, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (<kbdCmd</kbd> if on a Mac) and type "open shell".
+- To run the tests in the console, use the command `npm run test`. To open the Replit console, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (<kbd>Cmd</kbd> if on a Mac) and type "open shell".
 
 Write the following tests in `tests/1_unit-tests.js`:
 
